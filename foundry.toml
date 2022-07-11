@@ -1,0 +1,14 @@
+[default]
+src = 'contracts'
+out = 'out'
+# libs = ['lib', 'node_modules']
+libs = ['lib']
+gas_reports = ["*"]
+
+
+solc = "0.8.12"
+optimizer = true
+optimizer_runs = 10000
+
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config
