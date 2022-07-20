@@ -140,11 +140,11 @@ abstract contract BaoStaking is Ownable, ERC20 {
 
                 if (tData.owner != msg.sender) revert IncorrectOwner();
 
-                tData.owner = address(0);
-
                 baoSociety.transferFrom(address(this), msg.sender, tokenId);
 
                 rarityBonus -= getRarityBonus(tData); // underflow not possible if rarity stays constant
+
+                tData.owner = address(0);
                 tData.lastClaimed = uint40(block.timestamp);
             }
 
